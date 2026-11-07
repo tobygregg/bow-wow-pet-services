@@ -1,0 +1,13 @@
+{
+  "name": "bow-wow-pet-services",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website for BoW WoW Pet Services, Guernsey",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./assets/css/styles.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./assets/css/styles.css --watch"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}

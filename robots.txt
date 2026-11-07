@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tobygregg.github.io/bow-wow-pet-services/sitemap.xml
