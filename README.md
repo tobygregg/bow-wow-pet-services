@@ -33,9 +33,9 @@ _fb-pack/               ← the Facebook research pack this was built from (not 
 | Sand (`sand-50`–`sand-200`) | `#fbf8f3` · `#f5eee4` · `#ebdfd0` | Page and section backgrounds |
 | Sand (`sand-300`–`sand-600`) | `#cab9a4` · `#a58c75` · `#6c523c` | Line-art, bones, paw prints, tags. Warm banner tones |
 
-- **Fonts:** Bricolage Grotesque (headings), Figtree (body), Caveat (the small handwritten notes only). All from @fontsource, OFL licence, self-hosted.
+- **Fonts:** Fraunces (headings: a soft, slightly wonky serif; italic pink words carry the accents), Outfit (body, a geometric sans that suits the logo lettering), Caveat (the small handwritten notes only). All from @fontsource, OFL licence, self-hosted.
 - **Logo:** the Facebook logo was a small white-on-black image, so it was **redrawn as SVG**: the dog-and-cat mark is a clean polygon and the "BoW WoW" lettering is traced from the original. `images/brand/logo.svg` (dark), `logo-white.svg` and `mark.svg`. The page uses the same shapes from the SVG sprite at the top of each HTML file (`#logo-mark`, `#logo-word`).
-- **Graphics:** all hand-built inline SVG in the brand colours: the trotting dachshund (hero and footer), the cat on the hero arch and peeking over the form, the dog tag, step illustrations, the Guernsey map (traced from real coastline coordinates) and the icon sprite.
+- **Graphics:** all hand-built inline SVG in the brand colours: the slowly turning pink shape and spinning "Never rushed • Always loved" badge in the hero, the trotting dachshund (hero and footer), the cat on the hero arch and peeking over the form, the crossing pink/ink service bands, the dog tag, step illustrations and the icon sprite.
 
 ## Editing
 
@@ -46,9 +46,10 @@ _fb-pack/               ← the Facebook research pack this was built from (not 
   npm run build   # or `npm run watch` while editing
   ```
 - **Adding a work photo:** save two WebP versions in `images/work/`, `name.webp` (about 1600px on the long side) and `name-sm.webp` (about 800px). Copy an existing `<button class="g-item">` in the gallery and update `src`, `srcset`, `width`/`height` (the small file's size), `alt` and `data-caption` (the caption shown in the lightbox). Give a new tile the class `g-more` and it stays hidden until "Show more photos" is pressed.
-- **Services explorer:** each service has a tab `<button class="svc-tab">` and a matching `<article class="svc-panel">` (linked by `aria-controls` / `id`). Change the photo, sentences and "what's included" list in the panel. To add a service, copy one tab and one panel, give them new ids, and add the service to the form's `<select>`. The "Ask about…" buttons pre-select the form option whose text matches their `data-service`.
+- **Services explorer:** each service has a tab `<button class="svc-tab">` and a matching `<article class="svc-panel">` (linked by `aria-controls` / `id`). Each panel's colour comes from `data-theme` (`pink`, `ink` or `sand`). Change the photo, sentences and "what's included" list in the panel. To add a service, copy one tab and one panel, give them new ids, and add the service to the form's `<select>`. The "Ask about…" buttons pre-select the form option whose text matches their `data-service`.
 - **Photo ribbon:** the scrolling strip under the hero is the `<ul class="ribbon-track">` list. The JS duplicates it so the loop is seamless.
-- **Reviews:** six `<figure class="quote">` blocks. Quotes are trimmed from real reviews (marked with …), shown with first name + surname initial.
+- **Reviews:** one large featured quote, plus five `<figure class="quote">` cards in a swipeable carousel with arrow buttons. Quotes are trimmed from real reviews (marked with …), shown with first name + surname initial.
+- **Service bands:** the two crossing scrolling bands under the hero are plain lists in the photo ribbon section. Edit the words in both copies of each list.
 - **Before & after:** not used. The business is pet care and the pack had no before/after pairs. If Sam sends grooming before/after photos, a slider would suit the grooming panel.
 
 ## Before going live — checklist
@@ -65,7 +66,7 @@ _fb-pack/               ← the Facebook research pack this was built from (not 
   - Puppies, nervous dogs and cats welcome for grooming
   - Pet photography: the pack only says it's a keepsake or gift, so the panel is deliberately short. Ask what's included.
 - [ ] Ask if they're happy for "Sam and Mark" to be named. The names come from reviews.
-- [ ] Ask whether they cover St Martin, St Saviour and St Pierre du Bois. Facebook lists only Vale, St Sampson, St Peter Port, Castel, St Andrew, Forest and Torteval, so the map shows only those.
+- [ ] The site says they work "all over Guernsey". Facebook lists most parishes but not St Martin, St Saviour or St Pierre du Bois, so check that's fine.
 - [ ] Ask for a photo of Sam and Mark (with the van, or with dogs) for the About section, plus some grooming and cat photos. The pack had none, so those panels use other photos.
 - [ ] **Left out on purpose:** follower and review counts, the "Keep your dog legal and Safe" offer (no detail given) and the Reels view counts. There were no old or seasonal posts to remove.
 

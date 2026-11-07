@@ -42,8 +42,8 @@ module.exports = {
         },
       },
       fontFamily: {
-        display: ['"Bricolage Grotesque"', 'system-ui', 'sans-serif'],
-        sans: ['Figtree', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+        display: ['Fraunces', 'Georgia', 'serif'],
+        sans: ['Outfit', 'system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
         hand: ['Caveat', 'cursive'],
       },
       boxShadow: {

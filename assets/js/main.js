@@ -238,6 +238,20 @@
     });
   }
 
+  /* ── Reviews carousel arrows ──────────────────────────────── */
+  var qTrack = document.querySelector('[data-quotes]');
+  if (qTrack) {
+    var step = function (dir) {
+      var card = qTrack.querySelector('.quote');
+      var by = card ? card.getBoundingClientRect().width + 16 : 320;
+      qTrack.scrollBy({ left: dir * by, behavior: reduceMotion ? 'auto' : 'smooth' });
+    };
+    var prev = document.querySelector('[data-quotes-prev]');
+    var next = document.querySelector('[data-quotes-next]');
+    if (prev) prev.addEventListener('click', function () { step(-1); });
+    if (next) next.addEventListener('click', function () { step(1); });
+  }
+
   /* ── Footer year ──────────────────────────────────────────── */
   document.querySelectorAll('[data-year]').forEach(function (el) { el.textContent = new Date().getFullYear(); });
 })();
